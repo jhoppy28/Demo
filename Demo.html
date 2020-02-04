@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+        <title>
+       Demo Page
+        </title>
+        <style>
+            .red{
+                background:red;
+            }
+        </style>
+    </head>
+    <body>
+    Demo Text
+        <input id = "input1" type = number>
+        <button id = "Button1"> 
+        click me
+        </button>
+        <div id = "image">
+        
+        </div>
+        <script>
+        console.log("Hello World");
+            function sayHello(){
+                var input =document.getElementById("input1")
+                var value = input.value
+                console.log(value)
+                alert("Hello " + value)
+            }
+            var button = document.getElementById("Button1")
+            button.onclick = sayHello;
+            
+            $('#image')
+                .prepend(
+                    $('<img>',{id:'theImg',src:'https://i.imgur.com/tB4WAp7.jpg'})
+            ).prepend(
+             $("h1", {}).text("mid")  
+             )
+        </script>
+    </body>
+</html>
